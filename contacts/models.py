@@ -23,3 +23,13 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Note(models.Model):
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    contact = models.ForeignKey(Contact, on_delete=models.CASCADE, related_name="notes")
+
+    def __str__(self):
+        return self.text[:20]
