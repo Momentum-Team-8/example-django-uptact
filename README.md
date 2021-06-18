@@ -22,16 +22,19 @@ Pipenv uses a concept called a "virtualenv" in order to isolate the dependencies
 pipenv shell
 ```
 
-This will change your terminal to use the virtualenv for this project. *You must run this command in any new terminal you open.* You will know if you are in the virtualenv because your prompt will change to show you. You should have the name of the virtualenv on your prompt, like the following:
+This will change your terminal to use the virtualenv for this project. _You must run this command in any new terminal you open._ You will know if you are in the virtualenv because your prompt will change to show you. You should have the name of the virtualenv on your prompt, like the following:
 
 ```
-django--uptact is 📦 v0.1.0 via 🐍 v3.7.7 (uptact)
+example-django-uptact on  main via 🐍 v3.9.5 (example-django-uptact)
 ❯
 ```
 
-Note `(uptact)` at the end -- that's the virtualenv. If you need to exit the virtualenv, simply close your terminal window or run `exit`.
+Note what is in parens at the end -- that's the name of the virtualenv. It shows in the prompt when you are "inside" that virtual environment.
+
+If you need to exit the virtualenv, simply close your terminal window or run `exit`.
 
 If you get a `SECRET_KEY` error when you run your django server, you'll need to make sure Django can find that variable, which it is looking for in a `.env` file in the `uptact` project directory (see `django-environ` below). This repo provides a `.env.sample` so you can rename or copy that file so that is is named `.env`.
+
 ```
 $ cp uptact/.env.sample uptact/.env
 ```
@@ -40,8 +43,8 @@ $ cp uptact/.env.sample uptact/.env
 
 For the first assignment, spend time familiarizing yourself with Django. Look at the `uptact` directory (the _project directory_) and the `contacts` directory (an _app directory_). Answer the following questions for yourself:
 
-* If I wanted to add a new URL to this project, what two files would I edit?
-* If I wanted to add a birthday to each contact, what file would I edit?
+- If I wanted to add a new URL to this project, what two files would I edit?
+- If I wanted to add a birthday to each contact, what file would I edit?
 
 Then do the following steps:
 
@@ -57,8 +60,8 @@ With this assignment, we are going to explore relationships between models, and 
 
 Answer the following questions:
 
-* If I wanted to add a new model, where would I do that?
-* If I wanted to connect the new model to the `Contact` model, how would I do that?
+- If I wanted to add a new model, where would I do that?
+- If I wanted to connect the new model to the `Contact` model, how would I do that?
 
 Then do the following steps:
 
@@ -79,8 +82,6 @@ Previously, you added a `Note` model, but had no ability to create new notes thr
 
 Test this by adding some notes to individual contacts.
 
-
-
 ## About this project
 
 This project was generated from the Momentum Django project template. This template sets up some minimal changes:
@@ -90,4 +91,4 @@ This project was generated from the Momentum Django project template. This templ
 - There is a custom user model defined in `users.models.User`.
 - There is a `templates/` and a `static/` directory at the top level, both of which are set up to be used.
 - A `.gitignore` file is provided.
-- [Poetry](https://python-poetry.org/) is used to manage dependencies.
+- [Pipenv](https://pipenv.pypa.io/en/latest/) is used to manage dependencies.
